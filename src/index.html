@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #gameContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 画面の高さいっぱいに */
+            width: 100vw; /* 画面の幅いっぱいに */
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: min(100vw, calc(100vh * 1 / 2));
+            height: min(100vh, calc(100vw * 2 / 1));
+        }
+    </style>
+    <title>ネジゲーム</title>
+</head>
+<body>
+    <div id="gameContainer"></div>
+    <!-- bundle.jsへの参照はHtmlWebpackPluginによって自動的に挿入されます -->
+</body>
+</html>
