@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -26,3 +26,9 @@ jobs:
       run: |
         npm install
         npx webpack
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages  # GitHub Pagesで使用するブランチ
+        folder: dist     # ビルドしたファイルが含まれるディレクトリ。プロジェクトによって異なります。
